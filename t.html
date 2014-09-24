@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0,, user-scalable=true">
+        <link rel="stylesheet" href="http://bj-rd-01.baiyi.com:8399/webview/pub/css/jquery.mobile-1.3.2.min.css" >
+        <link rel="stylesheet" href="http://bj-rd-01.baiyi.com:8399/webview/pub/css/default.min.css" >
+        <style type="text/css">
+            .ui-li-desc{
+                margin-top: .5em;
+                margin-left: .3em;
+                
+            }
+        </style>
+  <title>应用推荐</title>
+</head>
+<body>
+    <div id="container"  data-role="page" class="my-page"  data-position="fixed">
+        <div id="header" data-theme="c" data-role="header" data-position="fixed">
+           <div class="hearderDiv"> 
+              <span >应用推荐</span>
+              <div class="apps-icon2 arrow" onclick="onBack();"></div>
+           </div>
+           <div id="tabs" data-role="navbar">
+           </div>
+        </div>
+        <div id="meddle">
+            
+        </div>
+        <div id="footerBox" data-theme="f" data-role="footer" style="text-align:center;margin-top:20px;">
+            <a id="footer-toTop" data-role="button" data-transition="none" data-inline="true" style="border:1px solid #CFCFCF;font-size:22px;margin-bottom:30px;padding: 12px;" onclick="addMore()" >  
+            </a>
+        </div>
+    </div>
+  <script src="http://bj-rd-01.baiyi.com:8399/webview/pub/js/jquery-1.10.2.min.js"></script>  
+   <script>
+      
+         var tabs = '{"statuscode":0,"statusmsg":"ok","activityid ":"22","theme":"default","retnnum":3,"data":[{"id":"72","activityid":"22","channel":"default","ordernum":"1","brief":"\u699c\u53551","boardname":"\u6700\u63a8\u8350","boardtype":"default_hot","icon":"","boardverion":"0","updatetime":"1411106313"},{"id":"73","activityid":"22","channel":"default","ordernum":"2","brief":"\u699c\u53552","boardname":"\u5927\u5bb6\u90fd\u5728\u73a9","boardtype":"game_hot","icon":"","boardverion":"0","updatetime":"1411106324"},{"id":"74","activityid":"22","channel":"default","ordernum":"3","brief":"\u699c\u53553","boardname":"\u5927\u5bb6\u90fd\u5728\u7528","boardtype":"app_hot","icon":"","boardverion":"0","updatetime":"1411106339"}]}'; //upload tab info
+         var dfList = '{"statuscode":0,"statusmsg":"ok","activityid":"22","pn":"0","rn":"10","retnum":10,"data":[{"id":"468","boardid":"72","ordernum":"1","yisourceid":"yisource_1410773473698","cp":"7026","channelid":"LK2054_0000_1","packagename":"com.screenlockshow.android","paytype":"2","sname":"\u9501\u5c4f\u79c0\u79c0","versioncode":"23","versionname":"1.61","packagesize":"4568442","icon":"http:\/\/nj.bs.baidu.com\/app-pool\/7ae71c47188962ab82506c42b069c244.png?sign=MBO:putANWaQBPT0njq43sPZMFLI:sI1t8ihXUl66VffK714DDsrdu%2FE%3D","downloadurl":"http:\/\/cloud.os.baidu.com\/urp\/rout.php?durl=6d34c92bcb0a71f1ca83926c624944ee","downloadtimes":"391551","score":"70","brief":"\u9501\u5c4f\u79c0\u79c0\uff0c\u827a\u672f\u5178\u8303\u7684\u9501\u5c4f\u5e94\u7528","catetags":"","contenttags":"","ribbons":"","hasstrategy":"0","updatetime":"1000000000","from":"0"},{"id":"469","boardid":"72","ordernum":"2","yisourceid":"yisource_1400652402974","cp":"7014","channelid":"708","packagename":"com.iyd.reader.ReadingJoy","paytype":"3","sname":"i\u60a6\u8bfb","versioncode":"57813","versionname":"5.7.8.13","packagesize":"4628481","icon":"http:\/\/nj.bs.baidu.com\/app-pool\/42e8d71cfbf761e02ef06eca0c9526a5.png?sign=MBO:putANWaQBPT0njq43sPZMFLI:pGrnTu7xIQ%2FAkMBc2euS58J6ggY%3D","downloadurl":"http:\/\/cloud.os.baidu.com\/urp\/rout.php?durl=e609ea916699f596ac0ba0604295f6bb","downloadtimes":"327471","score":"70","brief":"\u8bfb\u4e66\u5a31\u4e50\u4e24\u4e0d\u8bef\uff0c\u7b7e\u5230\u6709\u597d\u793c\uff0c\u770b\u4e66\u53ef\u514d\u8d39\uff0c\u66f4\u6709\u4f17\u591a\u6d3b\u52a8\u7b49\u4f60\u6765\u53c2\u4e0e\u3002 ","catetags":"","contenttags":"","ribbons":"","hasstrategy":"0","updatetime":"1000000000","from":"0"},{"id":"587","boardid":"92","ordernum":"1","yisourceid":"yisource_1409822020225","cp":"7009","channelid":"622","packagename":"cn.kuwo.player","paytype":"2","sname":"\u9177\u6211\u97f3\u4e50","versioncode":"6450","versionname":"6.4.5.0","packagesize":"10800682","icon":"http:\/\/nj.bs.baidu.com\/app-pool\/25f4a6df36b058cd30f5bd16022e015d.png?sign=MBO:putANWaQBPT0njq43sPZMFLI:iXI7R00kl%2BlgedPtNxDpIbCwMqk%3D","downloadurl":"http:\/\/cloud.os.baidu.com\/urp\/rout.php?durl=009d23963877d7846d4c874d60f50f28","downloadtimes":"102363045","score":"88","brief":"\u9177\u6211\u97f3\u4e502014\u662f\u7cbe\u5fc3\u6253\u9020\u7684\u97f3\u4e50\u7c7b\u624b\u673a\u5ba2\u6237\u7aef","catetags":"","contenttags":"","ribbons":"","hasstrategy":"0","updatetime":"1000000000","from":"0"},{"id":"588","boardid":"92","ordernum":"2","yisourceid":"yisource_1407746014002","cp":"1000","channelid":"1005777o","packagename":"cn.opda.a.phonoalbumshoushou","paytype":"2","sname":"\u767e\u5ea6\u624b\u673a\u536b\u58eb","versioncode":"1269","versionname":"5.5.2","packagesize":"12044281","icon":"http:\/\/nj.bs.baidu.com\/app-pool\/f4c5e94e44d9c503fd0268cd60f49d22.png?sign=MBO:putANWaQBPT0njq43sPZMFLI:KkU44T1SCTHfd1%2B6PCLZs6rTX4Q%3D","downloadurl":"http:\/\/cloud.os.baidu.com\/urp\/rout.php?durl=84c43c4c786fddca750a8b44dc7475e1","downloadtimes":"111156109","score":"85","brief":"\u767e\u5ea6\u624b\u673a\u536b\u58eb\uff0c\u624b\u673a\u652f\u4ed8\u66f4\u653e\u5fc3\uff01","catetags":"","contenttags":"","ribbons":"","hasstrategy":"0","updatetime":"1000000000","from":"0"},{"id":"589","boardid":"92","ordernum":"3","yisourceid":"yisource_1408438310936","cp":"1000","channelid":"1002326e","packagename":"com.baidu.appsearch","paytype":"2","sname":"\u767e\u5ea6\u624b\u673a\u52a9\u624b","versioncode":"16784137","versionname":"5.6.1","packagesize":"7955822","icon":"http:\/\/nj.bs.baidu.com\/app-pool\/9222017a8d50ffb5df557a9e8357858a.png?sign=MBO:putANWaQBPT0njq43sPZMFLI:%2B3ZyGswxTY1Zp9fuh%2FQOzuoTTYg%3D","downloadurl":"http:\/\/cloud.os.baidu.com\/urp\/rout.php?durl=66dfe8b0efc42d3482b1c6c64faec666","downloadtimes":"114553361","score":"84","brief":"\u767e\u5ea6\u624b\u673a\u52a9\u624b\u662fAndroid\u624b\u673a\u7684\u6743\u5a01\u8d44\u6e90\u5e73\u53f0","catetags":"","contenttags":"","ribbons":"","hasstrategy":"0","updatetime":"1000000000","from":"0"},{"id":"590","boardid":"92","ordernum":"4","yisourceid":"yisource_1405413565792","cp":"1000","channelid":"1006878a","packagename":"com.baidu.BaiduMap","paytype":"2","sname":"\u767e\u5ea6\u5730\u56fe","versioncode":"550","versionname":"7.2.3","packagesize":"21961438","icon":"http:\/\/nj.bs.baidu.com\/app-pool\/cc1bac42f01d6c6926e501cec46ff39a.png?sign=MBO:putANWaQBPT0njq43sPZMFLI:mRBD2xB6yykyG28Ud9%2BirudKob8%3D","downloadurl":"http:\/\/cloud.os.baidu.com\/urp\/rout.php?durl=eb21b62df991520d0c67ac2427f19b0e","downloadtimes":"126321394","score":"84","brief":"\u7528\u767e\u5ea6\u5730\u56fe\uff0c\u5feb\u901f\u5b9a\u4f4d\u4f60\u7684\u4f4d\u7f6e\uff0c\u63a2\u7d22\u5468\u8fb9\u7f8e\u98df\u5a31\u4e50\u3002","catetags":"","contenttags":"","ribbons":"","hasstrategy":"0","updatetime":"1000000000","from":"0"},{"id":"591","boardid":"92","ordernum":"5","yisourceid":"yisource_1410515484350","cp":"1000","channelid":"1002326c","packagename":"com.baidu.browser.apps","paytype":"2","sname":"\u767e\u5ea6\u6d4f\u89c8\u5668","versioncode":"46","versionname":"5.2.3.0","packagesize":"14505897","icon":"http:\/\/nj.bs.baidu.com\/app-pool\/d207759502807b81588a5597859154f6.png?sign=MBO:putANWaQBPT0njq43sPZMFLI:k1sOTgnVsD6ipe2bnPfm%2B6h9DD4%3D","downloadurl":"http:\/\/cloud.os.baidu.com\/urp\/rout.php?durl=b9a3c450b06055f85b4d55636282987c","downloadtimes":"73511036","score":"83","brief":"\u767e\u5ea6\u6d4f\u89c8\u56685.2# \u641c\u7d22\uff0c\u7edd\u4e0d\u7b49\u5f85\uff01\u5411\u4e0b\u4e00\u62c9\uff0c\u767e\u5ea6\u4e00\u4e0b\u3002","catetags":"","contenttags":"","ribbons":"","hasstrategy":"0","updatetime":"1000000000","from":"0"},{"id":"592","boardid":"92","ordernum":"6","yisourceid":"yisource_1410511081639","cp":"1000","channelid":"1002326a","packagename":"com.baidu.searchbox","paytype":"2","sname":"\u767e\u5ea6","versioncode":"16785677","versionname":"5.5","packagesize":"12556783","icon":"http:\/\/nj.bs.baidu.com\/app-pool\/7fe9f4b4ab2294a989b715120d366833.png?sign=MBO:putANWaQBPT0njq43sPZMFLI:%2FEPjgDBl2xU%2B8J8ssFffD6yFY88%3D","downloadurl":"http:\/\/cloud.os.baidu.com\/urp\/rout.php?durl=0947f512e32534f44231783729aac741","downloadtimes":"279343364","score":"84","brief":"\u624b\u673a\u767e\u5ea6\u5ba2\u6237\u7aef\u662f\u767e\u5ea6\u65d7\u4e0b\u6700\u6743\u5a01\u4e13\u4e1a\u7684\u641c\u7d22\u5ba2\u6237\u7aef","catetags":"","contenttags":"","ribbons":"","hasstrategy":"0","updatetime":"1000000000","from":"0"},{"id":"593","boardid":"92","ordernum":"7","yisourceid":"yisource_1404803134295","cp":"7024","channelid":"0","packagename":"com.cleanmaster.mguard_cn","paytype":"2","sname":"\u730e\u8c79\u6e05\u7406\u5927\u5e08","versioncode":"50510533","versionname":"5.5.1","packagesize":"9253568","icon":"http:\/\/nj.bs.baidu.com\/app-pool\/305cbfb33ca0f9ab6fd51b5fa3379abc.png?sign=MBO:putANWaQBPT0njq43sPZMFLI:F7nyp1aNrpredhWSRhu3tMNEk3s%3D","downloadurl":"http:\/\/cloud.os.baidu.com\/urp\/rout.php?durl=56b4aac0d9bdac36394a2a157b927118","downloadtimes":"466984","score":"70","brief":"\u730e\u8c79\u6e05\u7406\u5927\u5e08\u662f\u4e0a\u5343\u4e07\u5b89\u5353\u673a\u7528\u6237\u9009\u62e9\u7684\u5fc5\u5907\u6e05\u7406\u5de5\u5177\u3002","catetags":"","contenttags":"","ribbons":"","hasstrategy":"0","updatetime":"1000000000","from":"0"},{"id":"594","boardid":"92","ordernum":"8","yisourceid":"yisource_1410936911450","cp":"7025","channelid":"0","packagename":"com.sina.weibo","paytype":"2","sname":"\u65b0\u6d6a\u5fae\u535a","versioncode":"1176","versionname":"4.4.0","packagesize":"8320621","icon":"http:\/\/nj.bs.baidu.com\/app-pool\/495d7e2eeacaea7d825c2bbbbec1861c.png?sign=MBO:putANWaQBPT0njq43sPZMFLI:MuaSGdxDB8hlmotMShGy%2BNlO56E%3D","downloadurl":"http:\/\/cloud.os.baidu.com\/urp\/rout.php?durl=339d6d88410a92bce21d284715318dcc","downloadtimes":"380024","score":"70","brief":"\u65b0\u6d6a\u5fae\u535a\u7684Android\u7248\u624b\u673a\u5ba2\u6237\u7aef\uff0c\u968f\u65f6\u5206\u4eab\u65b0\u9c9c\u4e8b","catetags":"","contenttags":"","ribbons":"","hasstrategy":"0","updatetime":"1000000000","from":"0"}]}';//upload fistpage apps list
+        var tabMain = $.parseJSON(tabs);
+        var dfMain = $.parseJSON(dfList);
+        var tabsArray = [];
+        var baseUrl = '';
+         $(function(){
+             
+             if(tabMain) {
+                 var tabs = tabMain.data;
+                 var list = dfMain.data;
+                 $('#tabs').append('<ul id="tabsUl"></ul>');
+                 for(var i = 0,j = tabs.length; i < j; i++) {
+                    tabsArray.push(tabs[i].id);
+                     if(i == 0) {
+                       $('#tabsUl').append('<li  id="'+ tabs[i].id +'" class="ui-block-b"><a href="#"  data-transition="slide"  class="ui-btn-actives">'+ tabs[i].boardname +'</a></li>');
+                       createGrid(list,tabs[i].id,i,false,0,0);
+                    }else{
+                         $('#tabsUl').append('<li id="'+ tabs[i].id +'" class="ui-block-b"><a href="#" >'+ tabs[i].boardname +'</a></li>'); 
+                    }
+                 }
+             }
+            var tabsUlLi = $('#tabs ul li');
+             tabsUlLi.click(function(){
+                 if($('#' + this.id +'_listView').length > 0){
+                     $(".def").hide();
+                     $(".def").removeClass("def");
+                     $('#' + this.id +'_listView').show().addClass('def');
+                     $('.def').trigger("create");
+                     $('#dful').listview("refresh");
+                 }else{
+                     getList(this.id,0,false,$(this).index());
+                 }
+                 $('.ui-btn-actives').removeClass('ui-btn-actives');
+                  $('.ui-btn-actives').removeClass('ui-btn-active');
+                 $(this).children('a').addClass('ui-btn-actives');
+                  $('.ui-btn-actives').removeClass('ui-btn-active');
+          $('#footer-toTop').text('加载更多');
+                 
+             })
+             $('#footer-toTop').text('加载更多');
+         });
+        /**
+         * get apps lists
+         * @param {type} id
+         * @param {type} pn
+         * @param {type} isMore
+         * @param {type} tabsNum
+         * @returns {undefined}
+      * */
+         function getList(id,pn,isMore,tabsNum){
+             $.ajax({
+                 type:"post",
+                 url:  "http://bj-rd-01.baiyi.com:8399/webview/getWebView/getList",
+                 dataType:"json",
+                 data:{id:id,pn:pn},
+                 success:function(data){
+                   var dfMain = $.parseJSON(data);
+                   if(isMore && dfMain.retnum == 0){
+                       $('#footer-toTop').html('已经到底了');
+                   }
+                   if(dfMain){
+                      createGrid(dfMain.data,id,null,isMore,pn,tabsNum);
+                   }
+                   hideLoader();
+                 },
+         error:function(data){
+           hideLoader();
+         }
+             })
+         }
+    </script>
+      <script src="http://bj-rd-01.baiyi.com:8399/webview/pub/js/jquery.mobile-1.3.2.min.js"></script>
+      
+              <!-- mobile page  -->
+         <script src="http://bj-rd-01.baiyi.com:8399/webview/pub/js/deveplopment.js"></script>
+      
+</body>
+</html>
