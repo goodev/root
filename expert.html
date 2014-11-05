@@ -1,197 +1,82 @@
 
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Fonter 常见问题 </title>
+<html>
 
-        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-        <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    </head>
-    <body data-twttr-rendered="true">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Fonter CUSTOM MODE Help">
 
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a style="color:#0080ff;"  data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                            一、为啥需要ROOT才能换字体？
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse1" class="panel-collapse collapse ">
-                    <div class="panel-body">
-ROOT 权限是安卓手机的最高权限，一个应用一旦有了 ROOT 权限，就可以对手机系统为所欲为了，所以 ROOT 权限是很危险的、但是也是很强大的。对于初次使用安卓手机的用户，建议不要授予那些来历不明的应用 ROOT 权限，否则会
-造成一些后果；轻则 通讯录、短信、通话记录被盗取；重则 偷偷发短信、偷偷订阅一些收费服务 造成财产损失。<br/>
-除了一些定制的安卓系统（三星手机、Color OS 手机、小米手机、华为手机 等）支持免 ROOT 替换系统字体；其他大部分基于谷歌原生安卓系统的手机都需要替换系统的 字体文件（位于 /system/fonts/ 目录下） 才能更换系统
-字体， 所以在这些系统上 Fonter 需要 ROOT 权限才能修改系统字体。
-<br/> Fonter 承诺： 只用 ROOT 权限用户修改替换系统字体相关文件，不做其他用户不知情的任何操作。
-                    </div>
-                </div>
-            </div>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
+    <title>Fonter CUSTOM MODE Help</title>
+  </head>
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a style="color:#0080ff;" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                            二、三星手机如何换字体？
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse2" class="panel-collapse collapse">
-                    <div class="panel-body">
-大部分三星手机都集成了字体管理功能，如果您在系统设置中发现有“字体样式”相关选项，则说明您的手机带有字体管理功能。 带有该功能的手机，可以直接安装下载的
-字体 APK(安卓应用安装包)文件， 安装完字体后，在系统的“字体样式” 设置中启用安装的字体即可更换字体，无需 ROOT 权限。<br/>
-注意： 部分 Color OS 和一加手机也集成了字体管理功能，也可以使用该模式来更换系统字体。
-                    </div>
-                </div>
-            </div>
+  <body>
 
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="custom-mode-help" class="anchor" href="#custom-mode-help" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom mode help</h3>
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a style="color:#0080ff; " data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                            三、华为手机如何换字体？
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse3" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        华为手机带有主题功能，Fonter 把字体制作为华为的主题包，然后到主题商店界面中选择新生成的字体包来设置。操作步骤如下:
-                        <br/>“设置”-“全部设置”-“显示”-“字体样式”,在里面找到要替换的字体，然后点击应用按钮重启后即可生效。
-                    </div>
-                </div>
-            </div>
+<p>The standard android system have many font files. Different font files used in different place. Normally we just change the default Roboto-Regular.ttf font file to change system font. But in some place, such as Dialpad, will use other font. Also there have a lot of custom ROMs and OME ROMs, some of that will change the default system font, such as Sony Xperia devices using the SoMARegular.ttf font.</p>
 
+<p>In CUSTOM MODE you can define the files list you want to change. When you set a font to system, Fonter will popup this file list let you choose the files you want to replace. **BUT, There are some risks to cause device bootloop if you replace some files,such as if you replace SoMABold.ttf font on Sony Xperia will cause bootloop. ** So please careful when using CUSTOM MODE. </p>
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a style="color:#0080ff; " data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-                            四、魅族手机如何获取 ROOT 权限？
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse4" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        魅族系统需要先登录魅族账户，然后在账户里选择“开放系统权限”选项来开启 ROOT 功能。
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a style="color:#0080ff; " data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-                            五、小米手机如何换字体？
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse5" class="panel-collapse collapse">
-                    <div class="panel-body">
-小米手机带有主题功能，Fonter 会把字体制作为主题包，然后在主题界面选择混搭来修改字体，具体操作步骤如下：
-<br/> 主题界面选择‘分类’；再选择最下面的 ‘混搭’；然后选择‘混搭’界面中的‘字体’功能；最后在‘字体’界面中的‘我的’下应用该字体
-<br/> 注意 该功能仅支持部分小米系统。
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a style="color:#0080ff; " data-toggle="collapse" data-parent="#accordion" href="#collapse6">
-                            六、为何替换字体后，部分文字还是原来的样子？
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse6" class="panel-collapse collapse">
-                    <div class="panel-body">
-安卓系统保护多种字体，有 Robot、SansSerif、Arial 等，还包含多种样式： 粗体、斜体、粗斜体。大部分安卓应用都使用通用的 Robot 字体，所以在替换字体的时候，我们只替换了
-常用的普通 Robot 字体。 所以有些界面用到了其他字体，则不会修改。 另外在替换的字体文件中，可能字库不全，缺少的文字也会用系统字体来显示。
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a style="color:#0080ff; " data-toggle="collapse" data-parent="#accordion" href="#collapse7">
-                            七、如何恢复为原来的字体？
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse7" class="panel-collapse collapse">
-                    <div class="panel-body">
-                    设置界面有个 恢复默认字体 功能，点击该功能来恢复原来的字体。
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a style="color:#FF0000; " data-toggle="collapse" data-parent="#accordion" href="#collapse8">
-                            八、温馨提示，换字体必读
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse8" class="panel-collapse collapse">
-                    <div class="panel-body">
-                    由于安卓系统的各种定制版本存在，所以有些版本目前还没测试过，可能存在使用 Root 模式替换字体后，系统无法启动的情况。因此：
-                    当使用 Root 换字体模式时候，请务必先备份手机资料，防止字体替换失败导致手机无法开机，资料丢失。
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a style="color:#0080ff; " data-toggle="collapse" data-parent="#accordion" href="#collapse9">
-                            九、如何修改单个应用的字体？
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse9" class="panel-collapse collapse">
-                    <div class="panel-body">
-                    使用侧边栏里面的 “修改应用字体” 功能来换应用的字体。该功能依赖 Xposed 框架（http://www.xposed.info），需要先安装 Xposed 框架并启用 Fonter 模块，然后就可以使用
-                    “修改应用字体” 功能来给单个应用换字体了。
-                    <br/>
-                    注意： Xposed 框架只支持 4.0.3(包含) 以上的安卓系统，如果您的手机无法开启 Xposed 框架，则无法使用 “修改应用字体” 功能。
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a style="color:#0080ff; " data-toggle="collapse" data-parent="#accordion" href="#collapse10">
-                            十、如何使用 TTF 字体文件？
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse10" class="panel-collapse collapse">
-                    <div class="panel-body">
-                    在设置中可以设置自定义字体目录，你可以把您的 TTF 字体文件放到该目录下，这样“设置应用字体”的时候会查找自定义的字体文件。
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a style="color:#0080ff; " data-toggle="collapse" data-parent="#accordion" href="#collapse15">
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse15" class="panel-collapse collapse">
-                    <div class="panel-body">
-                    </div>
-                </div>
-            </div>
-            -->
+<p>The standard Android have those fonts in /system/fonts/ folder:</p>
 
-        </div>
+<ul>
+<li>AndroidClock.ttf = Stock Digital Clock Widget &amp; Dock/Desk Clock ("Clock" in App Drawer).</li>
+<li>AndroidClock_Highlight.ttf = Lock Screen Clock.</li>
+<li>AndroidClock_Solid.ttf = Unsure of its purpose.</li>
+<li>Clockopia.ttf = Former Stock clock font but, seems unused by the system in Android 4.0+.</li>
+<li>DroidSans.ttf = Apparently unused in Android 4.0+. System font from previous Android versions.</li>
+<li>DroidSans-Bold = Apparently unused in Android 4.0+. Bold system font from previous Android versions.</li>
+<li>Roboto-Regular.ttf = This is the one always referred to as the "System Font." It yields the most noticeable results and, is the one all the font changer apps alter. Affects almost all text on your device.</li>
+<li>Roboto-Bold = The bold version of Roboto. Not seen everywhere but it is seen. Opening your Gmail app to an email in your inbox will allow you to see Regular and Bold in the same occurrence. The sender's name will be in bold and their address will be in Regular. I recommend changing if you have a bold version of your replacement font.</li>
+<li>Roboto-Italic = Unsure of its frequency of use but, it's not often. However, if you have a matching Italic font, it can't hurt to use it.</li>
+<li>Roboto-BoldItalic = Unsure of its frequency of use but, it's not often. However, if you have a matching Bold Italic font, it can't hurt to use it.</li>
+</ul>
 
-    </body>
+<p>There are also various other languages of the Roboto font in the "System/fonts" folder. If a particular language is your default, I'm sure it's obvious what adjustments you would need to make with regards to font replacement.</p>
+
+<p>more info: <a href="http://forum.xda-developers.com/showthread.php?t=1847203">http://forum.xda-developers.com/showthread.php?t=1847203</a></p>
+
+<p>now, let's see how to use the CUSTOM MODE.</p>
+
+<h3>
+<a id="1-enable-custom-mode" class="anchor" href="#1-enable-custom-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Enable CUSTOM MODE</h3>
+
+<p>Go to the Settings screen, set "Font install type" to "CUSTOM MODE".
+<img src="http://goodev.github.io/root/images/setting1.png" alt="Choose CUSTOM MODE"></p>
+
+<h3>
+<a id="2-define-the-font-files-list-you-want-to-change" class="anchor" href="#2-define-the-font-files-list-you-want-to-change" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Define the font files list you want to change</h3>
+
+<p>Click the "Font list to replace" preference on the Settings screen. On the "Custom fonts" screen to config font files. You can add new ttf files or delete the file you don't need.
+<img src="http://goodev.github.io/root/images/custom_font.png" alt="Add font files"></p>
+
+<h3>
+<a id="3-change-system-font" class="anchor" href="#3-change-system-font" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Change system font</h3>
+
+<p>Now you can change system font. When you change system font , will popup a dialog let you choose which files you want to change. Choose the font files and click OK to change font.
+<img src="http://goodev.github.io/root/images/set_font.png" alt="set system font"></p>
+
+<p><img src="http://goodev.github.io/root/images/choose_font.png" alt="Choose font to replace"></p>
+
+<p>That's all! you are done!!!</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
 </html>
